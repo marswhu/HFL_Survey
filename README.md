@@ -1,6 +1,7 @@
 # Hetergeneous Federated Learning
 Survey for Hetergeneous Federated Learning by [MARS](https://marswhu.github.io/index.html) Group at the [Wuhan University](https://www.whu.edu.cn/), led by [Prof. Mang Ye](https://marswhu.github.io/index.html).
 
+---------------------------------------------
 ## Our Works
 
 ### Federated Learning with Domain Shift 
@@ -30,7 +31,7 @@ We deal with robust federated learning with noisy and heterogeneous clients
 
 We study a challenging problem, namely few-shot model agnostic federated learning.
 
-
+------------------------------------------------------
 ## HFL Survey
 ### Research Challenges
 > #### Statistical Heterogeneity
@@ -54,10 +55,11 @@ Statistical heterogeneity refers to the case where the data distribution across 
 - **Privacy Leakage**
 
 ### State-Of-The-Art(Updating)
-> #### Data-Level
+**Data-Level**
 
-***Private Data Processing***
-- **Data Preparation**
+> #### Private Data Processing
+- Data Preparation
+https://ieeexplore.ieee.org/abstract/document/9847342
 - **Data Privacy Protection**
 
 
@@ -110,9 +112,21 @@ Edge-case backdoors consider poisoning edge-case samples (the tail data of the d
 
 CRFL improves the robustness against backdoor attacks by clipping the model and adding smooth noise.
 
-- **RBML-DFL** — [A Blockchain-based Multi-layer Decentralized Framework for Robust Federated Learning](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9892039) *IJCNN 2022*
+- **RBML-DFL** — [A Blockchain-based Multi-layer Decentralized Framework for Robust Federated Learning](https://ieeexplore.ieee.org/abstract/document/9892039) *IJCNN 2022*
 
 RBML-DFL can prevent central server failures or malfunctions through blockchain encrypted transactions. 
+
+- **ResSFL** — [ResSFL: A Resistance Transfer Framework for Defending Model Inversion Attack in Split Federated Learning](https://openaccess.thecvf.com/content/CVPR2022/papers/Li_ResSFL_A_Resistance_Transfer_Framework_for_Defending_Model_Inversion_Attack_CVPR_2022_paper.pdf) *CVPR 2022*
+
+ResSFL is trained by experts through attacker perception to obtain a resistant feature extractor that can initialize the client models.
+
+- **Soteria** — [Soteria: Provable Defense against Privacy Leakage in Federated Learning from Representation Perspective](https://openaccess.thecvf.com/content/CVPR2021/papers/Sun_Soteria_Provable_Defense_Against_Privacy_Leakage_in_Federated_Learning_From_CVPR_2021_paper.pdf)
+
+Soteria performs attack defense by generating perturbed data representations, thereby decreasing the quality of reconstructed data.
+
+- **BaFFLe** — [BaFFLe: Backdoor Detection via Feedback-based Federated Learning](https://arxiv.org/pdf/2011.02167.pdf)
+
+The server trains backdoor filters and sends them randomly to clients to identify and remove backdoor instances.
 
 ***Uniform Benchmark***
 > #### General Federated Learning Systems
