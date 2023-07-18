@@ -5,31 +5,38 @@ Survey for Hetergeneous Federated Learning by [MARS](https://marswhu.github.io/i
 
 ### Federated Learning with Domain Shift 
 
-[Rethinking Federated Learning with Domain Shift: A Prototype View](https://openaccess.thecvf.com/content/CVPR2023/html/Huang_Rethinking_Federated_Learning_With_Domain_Shift_A_Prototype_View_CVPR_2023_paper.html) *CVPR 2023* [[Code](https://github.com/WenkeHuang/RethinkFL)]
-- We handle federated learning with domain shift from the prototype view.
+- **FPL** — [Rethinking Federated Learning with Domain Shift: A Prototype View](https://openaccess.thecvf.com/content/CVPR2023/papers/Huang_Rethinking_Federated_Learning_With_Domain_Shift_A_Prototype_View_CVPR_2023_paper.pdf) *CVPR 2023* [[Code](https://github.com/WenkeHuang/RethinkFL)]
 
-[Learn from Others and Be Yourself in Heterogeneous Federated Learning](https://openaccess.thecvf.com/content/CVPR2022/papers/Huang_Learn_From_Others_and_Be_Yourself_in_Heterogeneous_Federated_Learning_CVPR_2022_paper.pdf) *CVPR 2022* [[Code](https://github.com/WenkeHuang/FCCL)]
-- We investigate heterogeneity problems and catastrophic forgetting in federated learning.
+We handle federated learning with domain shift from the prototype view.
+
+- **FCCL** — [Learn from Others and Be Yourself in Heterogeneous Federated Learning](https://openaccess.thecvf.com/content/CVPR2022/papers/Huang_Learn_From_Others_and_Be_Yourself_in_Heterogeneous_Federated_Learning_CVPR_2022_paper.pdf) *CVPR 2022* [[Code](https://github.com/WenkeHuang/FCCL)]
+
+We investigate heterogeneity problems and catastrophic forgetting in federated learning.
 
 ### Federated Learning with Heterogeneous Graph 
 
-Federated Graph Semantic and Structural Learning - IJCAI 2023 
-- We handle federated graph learning from node-level semantic and graph-level structure.
+- **FGSSL** — [Federated Graph Semantic and Structural Learning](https://marswhu.github.io/publications/files/FGSSL.pdf) *IJCAI 2023* [[Code](https://github.com/WenkeHuang/FGSSL)]
+
+We handle federated graph learning from node-level semantic and graph-level structure.
 
 ### Federated Learning with Data Noise
-Robust Federated Learning With Noisy and Heterogeneous Clients - CVPR 2022 [[Link](https://openaccess.thecvf.com/content/CVPR2022/papers/Fang_Robust_Federated_Learning_With_Noisy_and_Heterogeneous_Clients_CVPR_2022_paper.pdf)][[Code](https://github.com/fangxiuwen/robust_fl)]
-- We deal with robust federated learning with noisy and heterogeneous clients
+- **RHFL** — [Robust Federated Learning With Noisy and Heterogeneous Clients](https://openaccess.thecvf.com/content/CVPR2022/papers/Fang_Robust_Federated_Learning_With_Noisy_and_Heterogeneous_Clients_CVPR_2022_paper.pdf) *CVPR 2022* [[Code](https://github.com/fangxiuwen/robust_fl)]
+
+We deal with robust federated learning with noisy and heterogeneous clients
 
 
 ### Federated Learning with Few-Shot
-Few-Shot Model Agnostic Federated Learning - ACMMM 2022 [[Link](https://dl.acm.org/doi/10.1145/3503161.3548764)]
-- We study a challenging problem, namely few-shot model agnostic federated learning.
+- **FSMAFL** — [Few-Shot Model Agnostic Federated Learning](https://dl.acm.org/doi/10.1145/3503161.3548764) *ACMMM 2022* [[Code](https://github.com/FangXiuwen/FSMAFL)]
+
+We study a challenging problem, namely few-shot model agnostic federated learning.
 
 
 ## HFL Survey
 ### Research Challenges
 > #### Statistical Heterogeneity
+Statistical heterogeneity refers to the case where the data distribution across clients in federated learning is inconsistent and does not obey the same sampling, i.e., Non-IID.
 - **Label Skew** 
+
 - **Feature Skew**
 - **Quality Skew**
 - **Quantity Skew**
@@ -49,11 +56,12 @@ Few-Shot Model Agnostic Federated Learning - ACMMM 2022 [[Link](https://dl.acm.o
 ### State-Of-The-Art(Updating)
 > #### Data-Level
 
-  ***Private Data Processing***
+***Private Data Processing***
 - **Data Preparation**
 - **Data Privacy Protection**
 
-  ***External Data Utilization***
+
+***External Data Utilization***
 - **Knowledge Distillation**
 - **Unsupervised Representation Learning**
 
@@ -80,12 +88,34 @@ Few-Shot Model Agnostic Federated Learning - ACMMM 2022 [[Link](https://dl.acm.o
 - **Decentralized Communication**
 
 ### Future Direction(Updating)
-> #### improving Communication Efficiency
-> #### Federated Fairness
-> #### Privacy Protection
-> #### Attack Robustness
-> #### Uniform Benchmark
-  ***General Federated Learning Systems***
+***improving Communication Efficiency***
+
+***Federated Fairness***
+
+***Privacy Protection***
+
+***Attack Robustness:*** federated systems may be vulnerable to two major types of attacks: poisoning attacks and inference attacks.
+
+> #### Attack Methods
+- **DBA** — [DBA: Distributed Backdoor Attacks against Federated Learning](https://openreview.net/pdf?id=rkgyS0VFvr) *ICLR 2020*
+
+DBA strategy decomposes a global trigger into local triggers, and injects them into multiple malicious clients.
+
+- **Edge-case backdoors** — [Attack of the Tails: Yes, You Really Can Backdoor Federated Learning](https://proceedings.neurips.cc/paper_files/paper/2020/file/b8ffa41d4e492f0fad2f13e29e1762eb-Paper.pdf) *NeurIPS 2020*
+
+Edge-case backdoors consider poisoning edge-case samples (the tail data of the data distributions). 
+
+> #### Defense strategies
+- **CRFL** — [CRFL: Certifiably Robust Federated Learning against Backdoor Attacks](http://proceedings.mlr.press/v139/xie21a/xie21a.pdf) *ICML 2021*
+
+CRFL improves the robustness against backdoor attacks by clipping the model and adding smooth noise.
+
+- **RBML-DFL** — [A Blockchain-based Multi-layer Decentralized Framework for Robust Federated Learning](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9892039) *IJCNN 2022*
+
+RBML-DFL can prevent central server failures or malfunctions through blockchain encrypted transactions. 
+
+***Uniform Benchmark***
+> #### General Federated Learning Systems
 - **FedML** — [FedML: A Research Library and Benchmark for Federated Machine Learning](https://arxiv.org/abs/2007.13518)
 
 FedML is an research library that supports distributed training, mobile on-device training, and stand-alone simulation training. It provides standardized implementations of many existing federated learning algorithms, and provides standardized benchmark settings for a variety of datasets, including Non-IID partition methods, number of devices and baseline models.
@@ -102,7 +132,7 @@ OARF leverages public datasets collected from different sources to simulate real
 
 FedEval is a federated learning evaluation model with five metrics including accuracy, communication, time consumption, privacy and robustness. FedEval is implemented and evaluated on two of the most widely used algorithms, FedSGD and FedAvg.
   
-  ***Specific Federated Learning Systems***
+> #### Specific Federated Learning Systems
 - **FedReIDBench** — [Performance Optimization of Federated Person Re-identification via Benchmark Analysis](https://dl.acm.org/doi/abs/10.1145/3394171.3413814) *ACM MM 2020*
 
 FedReIDBench is a new benchmark for implementing federated learning to person ReID, which includes nine different datasets and two federated scenarios. Specifically, the two federated scenarios are federated-by-camera scenario and federated-by-dataset scenario, which respectively represent the standard server-client architecture and client-edge-cloud architecture.
@@ -115,7 +145,7 @@ pFL-Bench is a benchmark for personalized federated learning, which covers twelv
 
 FedGraphNN is a benchmark system built on a unified formulation of graph federated learning, including extensive datasets from seven different fields, popular Graph Neural Network (GNN) models and federated learning algorithms.
 
-  ***Datasets***
+> #### Datasets
 - **LEAF** — [LEAF: A Benchmark for Federated Settings](https://arxiv.org/abs/1812.01097) *NeurIPS 2019 Workshop*
 
 LEAF contains 6 types of federated datasets covering different fields, including image classification (FEMNIST, Synthetic Dataset), image recognition (Celeba), sentiment analysis (Sentiment140) and next character prediction (Shakespeare, Reddit). In addition, LEAF provides two sampling methods of 'IID' and 'Non-IID' to divide the dataset to different clients.
