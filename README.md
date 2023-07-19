@@ -1,71 +1,131 @@
 # Hetergeneous Federated Learning
 Survey for Hetergeneous Federated Learning by [MARS](https://marswhu.github.io/index.html) Group at the [Wuhan University](https://www.whu.edu.cn/), led by [Prof. Mang Ye](https://marswhu.github.io/index.html).
 
----------------------------------------------
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](./CONTRIBUTING.md)
+
+**Table of Contents**
+
+- [Our Works](#our-works)
+  - [Federated Learning with Domain Shift](#federated-learning-with-domain-shift)
+  - [Federated Learning with Heterogeneous Graph](#federated-learning-with-heterogeneous-graph)
+  - [Federated Learning with Data Noise](#federated-learning-with-data-noise)
+  - [Federated Learning with Few-Shot](#federated-learning-with-few-shot)
+- [HFL Survey](#hfl-survey)
+  - [Research Challenges](#research-challenges)
+    - [Statistical Heterogeneity](#statistical-heterogeneity)
+    - [Model Heterogeneity](#model-heterogeneity)
+    - [Communication Heterogeneity](#communication-heterogeneity)
+    - [Device Heterogeneity](#device-heterogeneity)
+    - [Additional Challenges](#additional-challenges)
+  - [State-Of-The-Art(Updating)](#state-of-the-art)
+    - [Data-Level](#data-level)
+    - [Model-Level](#model-level)
+    - [Server-Level](#server-level)
+  - [Future Direction(Updating)](#future-direction)
+    - [Improving Communication Efficiency](#improving-communication-efficiency)
+    - [Federated Fairness](#federated-fairness)
+    - [Privacy Protection](#privacy-protection)
+    - [Attack Robustness](#attack-robustness)
+    - [Uniform Benchmark](#uniform-benchmark)
+
+
 ## Our Works
+---------------------------------------------
 
 ### Federated Learning with Domain Shift 
 
 - **FPL** — [Rethinking Federated Learning with Domain Shift: A Prototype View](https://openaccess.thecvf.com/content/CVPR2023/papers/Huang_Rethinking_Federated_Learning_With_Domain_Shift_A_Prototype_View_CVPR_2023_paper.pdf) *CVPR 2023* [[Code](https://github.com/WenkeHuang/RethinkFL)]
 
-We handle federated learning with domain shift from the prototype view.
+    We handle federated learning with domain shift from the prototype view.
 
 - **FCCL** — [Learn from Others and Be Yourself in Heterogeneous Federated Learning](https://openaccess.thecvf.com/content/CVPR2022/papers/Huang_Learn_From_Others_and_Be_Yourself_in_Heterogeneous_Federated_Learning_CVPR_2022_paper.pdf) *CVPR 2022* [[Code](https://github.com/WenkeHuang/FCCL)]
 
-We investigate heterogeneity problems and catastrophic forgetting in federated learning.
+    We investigate heterogeneity problems and catastrophic forgetting in federated learning.
 
 ### Federated Learning with Heterogeneous Graph 
 
 - **FGSSL** — [Federated Graph Semantic and Structural Learning](https://marswhu.github.io/publications/files/FGSSL.pdf) *IJCAI 2023* [[Code](https://github.com/WenkeHuang/FGSSL)]
 
-We handle federated graph learning from node-level semantic and graph-level structure.
+    We handle federated graph learning from node-level semantic and graph-level structure.
 
 ### Federated Learning with Data Noise
 - **RHFL** — [Robust Federated Learning With Noisy and Heterogeneous Clients](https://openaccess.thecvf.com/content/CVPR2022/papers/Fang_Robust_Federated_Learning_With_Noisy_and_Heterogeneous_Clients_CVPR_2022_paper.pdf) *CVPR 2022* [[Code](https://github.com/fangxiuwen/robust_fl)]
 
-We deal with robust federated learning with noisy and heterogeneous clients
+    We deal with robust federated learning with noisy and heterogeneous clients.
 
+- **AugHFL** — Robust Heterogeneous Federated Learning under Data Corruption *ICCV 2023* (Coming soon)
+
+    We deal with robust heterogeneous federated learning under data corruption.
 
 ### Federated Learning with Few-Shot
 - **FSMAFL** — [Few-Shot Model Agnostic Federated Learning](https://dl.acm.org/doi/10.1145/3503161.3548764) *ACMMM 2022* [[Code](https://github.com/FangXiuwen/FSMAFL)]
 
-We study a challenging problem, namely few-shot model agnostic federated learning.
+    We study a challenging problem, namely few-shot model agnostic federated learning.
 
-------------------------------------------------------
 ## HFL Survey
+------------------------------------------------------
+### Overview
+
+![Overview](overview.png)
+
 ### Research Challenges
 > #### Statistical Heterogeneity
 Statistical heterogeneity refers to the case where the data distribution across clients in federated learning is inconsistent and does not obey the same sampling, i.e., Non-IID.
-- **Label Skew** 
 
-- **Feature Skew**
-- **Quality Skew**
-- **Quantity Skew**
+![Statistical Heterogeneity](statis_hetero.png)
 
 > #### Model Heterogeneity
-- **Partial Heterogeneity** 
-- **Compelete Heterogeneity**
+Model heterogeneity refers to the fact that in federated learning, participating clients may have local models with different architectures.
 
 > #### Communication Heterogeneity
+The devices are typically deployed in different network environments and have different network connectivity settings (3G, 4G, 5G, Wi-Fi), which leads to inconsistent communication bandwidth, latency, and reliability, i.e., communication heterogeneity.
 
 > #### Device Heterogeneity
+The differences in device hardware capabilities (CPU, memory, battery life) may lead to different storage and computation capabilities, which inevitably lead to device heterogeneity.
 
 > #### Additional Challenges
-- **Knowledge Transfer Barrier** 
-- **Privacy Leakage**
+***Knowledge Transfer Barrier***
 
-### State-Of-The-Art(Updating)
-**Data-Level**
+Federated learning aims to transfer knowledge among different clients to collaboratively learn models with superior performance. However, the four heterogeneities mentioned above will cause knowledge transfer barriers.
 
-> #### Private Data Processing
-- Data Preparation
-https://ieeexplore.ieee.org/abstract/document/9847342
-- **Data Privacy Protection**
+***Privacy Leakage***
+  
+Federated learning by itself cannot guarantee perfect data security, as there are still potential privacy risks. Moreover, the above-mentioned four types of heterogeneity inevitably exacerbate privacy leakage in different learning stages. 
 
+### State-Of-The-Art
+> #### Data-Level
+
+***Private Data Processing***
+1. **Data Preparation**
+- **Safe** — [Safe: Synergic Data Filtering for Federated Learning in Cloud-Edge Computing](https://ieeexplore.ieee.org/abstract/document/9847342) *IEEE TII 2022*
+
+    Safe detects and filters out poisoned data from attacked devices through a clustering algorithm.
+
+- **FedMix** — [FedMix: Approximation of Mixup under Mean Augmented Federated Learning](https://arxiv.org/abs/2107.00233) *ICLR 2021*
+
+    FedMix performs data augmentation based on the MixUp strategy.
+
+- **Astraea** — [Astraea: Self-Balancing Federated Learning for Improving Classification Accuracy of Mobile Deep Learning Applications](https://arxiv.org/pdf/1907.01132.pdf) *ICCD 2019*
+
+    Astraea performs data augmentation based on the global data distribution, generated by collecting the local data distribution.
+
+- **FAug** — [Communication-Efficient On-Device Machine Learning: Federated Distillation and Augmentation under Non-IID Private Data](https://arxiv.org/pdf/1811.11479.pdf) *NeurIPS 2018 Workshop*
+
+    FAug studies the trade-off between privacy leakage and communication overhead through a GAN-based data augmentation scheme.
+
+2. **Data Privacy Protection**
+
+- **PLDP-PFL** — [Communication-Efficient On-Device Machine Learning: Federated Distillation and Augmentation under Non-IID Private Data](https://ieeexplore.ieee.org/abstract/document/9082603) *IEEE IoT 2020*
+
+    PLDP-PFL performs personalized differential privacy according to the sensitivity of private data.
+
+- **A Syntactic Approach for Privacy in FL** — [Anonymizing Data for Privacy-Preserving Federated Learning](https://arxiv.org/pdf/2002.09096.pdf)
+
+    They use anonymization technology to desensitize local private data.
 
 ***External Data Utilization***
-- **Knowledge Distillation**
-- **Unsupervised Representation Learning**
+1. **Knowledge Distillation**
+2. **Unsupervised Representation Learning**
 
 > #### Model-Level
 
@@ -89,14 +149,16 @@ https://ieeexplore.ieee.org/abstract/document/9847342
 - **Client Clustering**
 - **Decentralized Communication**
 
-### Future Direction(Updating)
-***improving Communication Efficiency***
+### Future Direction
+> #### Improving Communication Efficiency
 
-***Federated Fairness***
+> #### Federated Fairness
 
-***Privacy Protection***
+> #### Privacy Protection
 
-***Attack Robustness:*** federated systems may be vulnerable to two major types of attacks: poisoning attacks and inference attacks.
+
+
+> #### Attack Robustness
 
 > #### Attack Methods
 - **DBA** — [DBA: Distributed Backdoor Attacks against Federated Learning](https://openreview.net/pdf?id=rkgyS0VFvr) *ICLR 2020*
@@ -128,7 +190,7 @@ Soteria performs attack defense by generating perturbed data representations, th
 
 The server trains backdoor filters and sends them randomly to clients to identify and remove backdoor instances.
 
-***Uniform Benchmark***
+> #### Uniform Benchmark
 > #### General Federated Learning Systems
 - **FedML** — [FedML: A Research Library and Benchmark for Federated Machine Learning](https://arxiv.org/abs/2007.13518)
 
