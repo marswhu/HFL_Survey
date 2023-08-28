@@ -1,4 +1,7 @@
 # Hetergeneous Federated Learning
+> #### [Heterogeneous Federated Learning: State-of-the-art and Research Challenges](https://arxiv.org/abs/2307.10616) (Accepted to ACM Computing Surveys)
+> Mang Ye, Xiuwen Fang, Bo Du, Pong C. Yuen, Dacheng Tao
+
 Survey for Hetergeneous Federated Learning by [MARS](https://marswhu.github.io/index.html) Group at the [Wuhan University](https://www.whu.edu.cn/), led by [Prof. Mang Ye](https://marswhu.github.io/index.html).
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](./CONTRIBUTING.md)
