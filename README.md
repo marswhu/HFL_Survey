@@ -214,6 +214,10 @@ Federated learning by itself cannot guarantee perfect data security, as there ar
 
     FedGEN performs statistical HFL through a data-free knowledge distillation approach.
 
+- **FedLMD** — [Federated Learning with Label-Masking Distillation](https://dl.acm.org/doi/abs/10.1145/3581783.3611984) *ACM MM 2023*
+
+    FedLMD facilitates federated learning by perceiving various label distributions per client. 
+
 2. **Transfer Learning**
 
 - **FT-pFL** — [Parameterized Knowledge Transfer for Personalized Federated Learning](https://proceedings.neurips.cc/paper_files/paper/2021/file/5383c7318a3158b9bc261d0b6996f7c2-Paper.pdf) *NeurIPS 2021*
