@@ -63,6 +63,11 @@ Survey for Hetergeneous Federated Learning by [MARS](https://marswhu.github.io/i
 
     We deal with robust heterogeneous federated learning under data corruption.
 
+### Federated Learning with Privacy Mechanisms
+- **FedDPA** — [Dynamic Personalized Federated Learning with Adaptive Differential Privacy](https://openreview.net/forum?id=RteNLuc8D9) *NeurIPS 2023* [[Code](https://github.com/xiyuanyang45/DynamicPFL)]
+
+    We propose a novel federated learning method with dynamic fisher personalization and adaptive constraint.
+
 ### Federated Learning with Few-Shot
 - **FSMAFL** — [Few-Shot Model Agnostic Federated Learning](https://dl.acm.org/doi/10.1145/3503161.3548764) *ACMMM 2022* [[Code](https://github.com/FangXiuwen/FSMAFL)]
 
