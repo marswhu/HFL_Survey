@@ -38,13 +38,48 @@ Survey for Heterogeneous Federated Learning by [MARS](https://marswhu.github.io/
 
 - [Heterogeneous Federated Learning: State-of-the-art and Research Challenges](https://arxiv.org/pdf/2307.10616) *ACM Computing Surveys 2023* [[Code](https://github.com/marswhu/HFL_Survey)]
 
-- [A Federated Learning for Generalization, Robustness, Fairness: A Survey and Benchmark](https://arxiv.org/pdf/2311.06750) [[Code](https://github.com/WenkeHuang/MarsFL)]
+- [A Federated Learning for Generalization, Robustness, Fairness: A Survey and Benchmark](https://arxiv.org/pdf/2311.06750) *IEEE TPAMI 2024* [[Code](https://github.com/WenkeHuang/MarsFL)]
 
-### Federated Learning with Domain Shift 
+- [Vertical federated learning for effectiveness, security, applicability: A survey](https://arxiv.org/pdf/2405.17495) [[Code](https://github.com/shentt67/VFL_Survey)]
 
-- **FedHEAL** — [Fair Federated Learning under Domain Skew with Local Consistency and Domain Diversity](https://github.com/yuhangchen0/FedHEAL) *CVPR 2024* [[Code](https://github.com/yuhangchen0/FedHEAL)]
+### Heterogeneity in Federated Learning
 
-    We investigate the fairness of federated learning under domain skew with local consistency and domain diversity.
+- **RUCR** — [Federated Learning with Long-Tailed Data via Representation Unification and Classifier Rectification](https://ieeexplore.ieee.org/abstract/document/10534053) *IEEE TIFS 2024* 
+
+    We alleviate the distorted feature space and the biased classifier under the long-tailed data.
+
+- **FGGP** — [Federated Graph Learning under Domain Shift with Generalizable Prototypes](https://ojs.aaai.org/index.php/AAAI/article/view/29468) *AAAI 2024* [[Code](https://github.com/GuanchengWan/FGGP)]
+
+    We deal with federated graph learning under domain shift with generalizable prototypes.
+
+- **FGSSL** — [Federated Graph Semantic and Structural Learning](https://marswhu.github.io/publications/files/FGSSL.pdf) *IJCAI 2023* [[Code](https://github.com/WenkeHuang/FGSSL)]
+
+    We handle federated graph learning from node-level semantic and graph-level structure.
+
+
+### Robustness in Federated Learning
+
+- **FDCR** — [Parameter Disparities Dissection for Backdoor Defense in Heterogeneous Federated Learning](https://openreview.net/pdf?id=g8wnC1E1OS) *NeurIPS 2024* [[Code](https://github.com/wenkehuang/FDCR)]
+
+    We utilize Fisher Information to calculate the degree of parameter importance for local distributions.
+
+- **SDFC** — [Fisher Calibration for Backdoor-Robust Heterogeneous Federated Learning](https://marswhu.github.io/publications/files/ECCV_2024_BackdoorFL.pdf) *ECCV 2024*
+
+    We utilize the Fisher Information to calculate the parameter importance degree for the local agnostic and global validation distribution.
+
+- **SDEA** — [Self-Driven Entropy Aggregation for Byzantine-Robust Heterogeneous Federated Learning](https://openreview.net/pdf?id=k2axqNsVVO) *ICML 2024*
+
+    We leverage the random public dataset to conduct Byzantine-robust aggregation in heterogeneous FL.
+
+- **AugHFL** — [Robust Heterogeneous Federated Learning under Data Corruption](https://openaccess.thecvf.com/content/ICCV2023/papers/Fang_Robust_Heterogeneous_Federated_Learning_under_Data_Corruption_ICCV_2023_paper.pdf) *ICCV 2023* [[Code](https://github.com/FangXiuwen/AugHFL)]
+
+    We deal with robust heterogeneous federated learning under data corruption.
+
+- **RHFL** — [Robust Federated Learning With Noisy and Heterogeneous Clients](https://openaccess.thecvf.com/content/CVPR2022/papers/Fang_Robust_Federated_Learning_With_Noisy_and_Heterogeneous_Clients_CVPR_2022_paper.pdf) *CVPR 2022* [[Code](https://github.com/fangxiuwen/robust_fl)]
+
+    We deal with robust federated learning with noisy and heterogeneous clients.
+
+### Generalization in Federated Learning
 
 - **FCCL+** — [Generalizable Heterogeneous Federated Cross-Correlation and Instance Similarity Learning](https://arxiv.org/pdf/2309.16286.pdf) *TPAMI 2023* [[Code](https://github.com/WenkeHuang/FCCL)]
   
@@ -58,26 +93,6 @@ Survey for Heterogeneous Federated Learning by [MARS](https://marswhu.github.io/
 
     We investigate heterogeneity problems and catastrophic forgetting in federated learning.
 
-### Federated Learning with Data Noise
-
-- **RHFL** — [Robust Federated Learning With Noisy and Heterogeneous Clients](https://openaccess.thecvf.com/content/CVPR2022/papers/Fang_Robust_Federated_Learning_With_Noisy_and_Heterogeneous_Clients_CVPR_2022_paper.pdf) *CVPR 2022* [[Code](https://github.com/fangxiuwen/robust_fl)]
-
-    We deal with robust federated learning with noisy and heterogeneous clients.
-
-- **AugHFL** — [Robust Heterogeneous Federated Learning under Data Corruption](https://openaccess.thecvf.com/content/ICCV2023/papers/Fang_Robust_Heterogeneous_Federated_Learning_under_Data_Corruption_ICCV_2023_paper.pdf) *ICCV 2023* [[Code](https://github.com/FangXiuwen/AugHFL)]
-
-    We deal with robust heterogeneous federated learning under data corruption.
-  
-### Federated Learning with Heterogeneous Graph 
-
-- **FGGP** — [Federated Graph Learning under Domain Shift with Generalizable Prototypes](https://ojs.aaai.org/index.php/AAAI/article/view/29468) *AAAI 2024* [[Code](https://github.com/GuanchengWan/FGGP)]
-
-    We deal with federated graph learning under domain shift with generalizable prototypes.
-
-- **FGSSL** — [Federated Graph Semantic and Structural Learning](https://marswhu.github.io/publications/files/FGSSL.pdf) *IJCAI 2023* [[Code](https://github.com/WenkeHuang/FGSSL)]
-
-    We handle federated graph learning from node-level semantic and graph-level structure.
-
 ### Personalized Federated Learning
 
 - **FedAS** — [FedAS: Bridging Inconsistency in Personalized Fedearated Learning](https://github.com/xiyuanyang45/FedAS) *CVPR 2024* [[Code](https://github.com/xiyuanyang45/FedAS)]
@@ -87,6 +102,12 @@ Survey for Heterogeneous Federated Learning by [MARS](https://marswhu.github.io/
 - **FedDPA** — [Dynamic Personalized Federated Learning with Adaptive Differential Privacy](https://openreview.net/pdf?id=RteNLuc8D9) *NeurIPS 2023* [[Code](https://github.com/xiyuanyang45/DynamicPFL)]
 
     we propose a novel adaptive method for personalized federated learning with differential privacy.
+
+### Fairness in Federated Learning
+
+- **FedHEAL** — [Fair Federated Learning under Domain Skew with Local Consistency and Domain Diversity](https://github.com/yuhangchen0/FedHEAL) *CVPR 2024* [[Code](https://github.com/yuhangchen0/FedHEAL)]
+
+    We investigate the fairness of federated learning under domain skew with local consistency and domain diversity.
 
 ### Federated Learning with Few-Shot
 - **FSMAFL** — [Few-Shot Model Agnostic Federated Learning](https://dl.acm.org/doi/10.1145/3503161.3548764) *ACMMM 2022* [[Code](https://github.com/FangXiuwen/FSMAFL)]
