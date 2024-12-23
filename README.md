@@ -99,10 +99,6 @@ Survey for Heterogeneous Federated Learning by [MARS](https://marswhu.github.io/
 
     we present a novel PFL framework with federated parameter-alignment and client-synchronization.
 
-- **FedDPA** — [Dynamic Personalized Federated Learning with Adaptive Differential Privacy](https://openreview.net/pdf?id=RteNLuc8D9) *NeurIPS 2023* [[Code](https://github.com/xiyuanyang45/DynamicPFL)]
-
-    we propose a novel adaptive method for personalized federated learning with differential privacy.
-
 ### Fairness in Federated Learning
 
 - **FedHEAL** — [Fair Federated Learning under Domain Skew with Local Consistency and Domain Diversity](https://github.com/yuhangchen0/FedHEAL) *CVPR 2024* [[Code](https://github.com/yuhangchen0/FedHEAL)]
